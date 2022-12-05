@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuBurger = document.querySelector('.menuImgBurger'); // evento
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuShoppingCart = document.querySelector('.navbar-shopping-cart'); //evento
-const aside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container')
 
 // ------
@@ -14,10 +14,10 @@ menuEmail.addEventListener('click', () => {
 // -----
 menuBurger.addEventListener('click', () => {
     // Relacion con la funcion de abajo
-    const isAsideClosed = aside.classList.contains('inactive');
+    const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
 
     if(!isAsideClosed){
-        aside.classList.add('inactive');
+        shoppingCartContainer.classList.add('inactive');
     }
 
     // ya estaba
@@ -38,7 +38,7 @@ menuShoppingCart.addEventListener('click', () => {
         desktopMenu.classList.add('inactive');
     }
 
-    aside.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
 });
 
 
